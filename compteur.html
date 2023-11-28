@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>compteur</title>
+</head>
+<body>
+    <div id="rtk">
+        <input type="submit" value="+" id="plus">
+        <span id="counter" style="margin-left:15px;margin-right: 15px"></span>
+        <input type="submit" value="-" id="minus">
+    </div>
+    <style>
+    #rtk{
+        display:flex;
+        justify-content:center;
+    }
+
+    </style>
+    <input type="submit" value="reset" id="redémarrer">
+    <script>
+        var inc= document.getElementById('plus')
+        var dec=document.getElementById('minus')
+        var count=document.getElementById('counter')
+        var reset=document.getElementById('redémarrer')
+        var counter=0;
+        inc.addEventListener('click',function(){
+            if(counter<10)
+            {
+                counter+=1
+            }
+            count.innerHTML=counter
+        })
+        dec.addEventListener('click',function(){
+            if(counter>0)
+            {
+                counter-=1
+            }
+            count.innerHTML=counter
+        })
+        reset.addEventListener('click',function(){
+            counter=0
+        count.innerHTML=counter
+        })
+
+    </script>
+    
+
+</body>
+</html>
